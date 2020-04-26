@@ -1,0 +1,116 @@
+.skills {
+    padding: 10px 10px 40px 10px;
+
+    &__container {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+        padding-bottom: 20px;
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.skill-item {
+    background-color: #2D3651;
+    min-height: calc(33.33vh - 13px);
+    position: relative;
+    overflow: hidden;
+
+    &:hover &__image {
+        transform: scale(1.1);
+    }
+
+    &:hover &__link {
+        color: #D66926;
+    }
+
+    &:nth-of-type(1) {
+        grid-area: a1;
+    }
+    
+    &:nth-of-type(2) {
+        grid-area: a2;
+    }
+    
+    &:nth-of-type(3) {
+        grid-area: a3;
+    }
+    
+    &:nth-of-type(4) {
+        grid-area: a4;
+    }
+    
+    &:nth-of-type(5) {
+        grid-area: a5;
+    }
+    
+    &:nth-of-type(6) {
+        grid-area: a6;
+    }
+    
+    &:nth-of-type(7) {
+        grid-area: a7;
+    }
+    
+    &:nth-of-type(8) {
+        grid-area: a8;
+    }
+    
+    &:nth-of-type(9) {
+        grid-area: a9;
+    }
+
+    &__overlay {
+        position: absolute;
+        background-color: #2d3651;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        opacity: 0.8;
+        transition: opacity;
+    }
+    
+    &:hover &__overlay {
+        opacity: 0.95 !important;
+    
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-position: center center;
+        background-size: cover;
+        transition: transform 0.5s;
+    }
+
+    &__title {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+    }
+
+    &__link {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        transition: color 0.5s;
+    }
+}
