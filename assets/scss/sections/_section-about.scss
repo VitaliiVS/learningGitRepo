@@ -14,7 +14,7 @@
     }
 
     &__content {
-        grid-template-areas: a1;
+        grid-area: a1;
         color: $color-primary;
         letter-spacing: 0.05em;
         line-height: 1.35em;
@@ -45,7 +45,7 @@
     }
 
     &__image {
-        grid-template-areas: a2;
+        grid-area: a2;
         min-width: 100%;
         min-height: 487px;
     }

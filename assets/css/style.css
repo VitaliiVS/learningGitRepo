@@ -851,7 +851,7 @@ h2 {
 }
 
 .about__content {
-  grid-template-areas: a1;
+  grid-area: a1;
   color: #2d3651;
   letter-spacing: 0.05em;
   line-height: 1.35em;
@@ -874,7 +874,7 @@ h2 {
 }
 
 .about__image {
-  grid-template-areas: a2;
+  grid-area: a2;
   min-width: 100%;
   min-height: 487px;
 }
