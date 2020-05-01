@@ -5,6 +5,10 @@
     z-index: 1;
     width: 100%;
 
+    @include md {
+        background-color: rgba(#44596E, 0.25);
+    }
+
     &__container {
         display: grid;
         grid-template-columns: auto 1fr;

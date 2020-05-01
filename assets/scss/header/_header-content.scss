@@ -10,6 +10,14 @@
 
     &__title {
         text-align: center;
+        
+        @include lg-min {
+            margin: 0px 0px 53px 0px;
+        }
+
+        @include lg {
+            margin: 0px 0px 43px 0px;
+        }
     }
 
     &__buttons {

@@ -11,6 +11,15 @@
         transform: rotate(0deg);
         transition: .5s ease-in-out;
         cursor: pointer;
+
+        @include md-min {
+            display: none;
+            
+        }
+
+        @include md {
+            display: block;
+        }
     }
 
     &__hamburger span {
@@ -58,6 +67,14 @@
         padding: 0;
         font-size: 18px;
         letter-spacing: 0.09em;
+
+        @include md-min {
+            display: flex;
+        }
+
+        @include md {
+            display: none;
+        }
     }
 
     &__link {
