@@ -4,13 +4,32 @@
     &__container {
         display: grid;
         grid-gap: 10px;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
         padding-bottom: 20px;
+
+        @include lg-min {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+        }
+        
+        @include lg-md {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+        }
+
+        @include md-sm {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+        }
+
+        @include sm {
+            grid-template-columns: 1fr;
+            grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+        }
     }
     &__button {
         display: flex;
         justify-content: center;
+
     }
 }
 
@@ -100,9 +119,16 @@
         bottom: 0;
         left: 0;
         margin: 0;
-        font-size: 20px;
         font-weight: bold;
         letter-spacing: 0.1em;
+
+        @include md-min {
+            font-size: 20px;
+        }
+
+        @include md {
+            font-size: 18px;
+        }
     }
 
     &__link {

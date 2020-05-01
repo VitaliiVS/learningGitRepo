@@ -505,7 +505,6 @@ h1 {
   height: 60px;
   font-size: 18px;
   border: 2px solid #2D3651;
-  min-width: 350px;
   background-color: rgba(45, 54, 81, 0.8);
   letter-spacing: 0.1em;
 }
@@ -694,8 +693,6 @@ h1 {
 .skills__container {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   padding-bottom: 20px;
 }
 
@@ -802,7 +799,6 @@ h1 {
   bottom: 0;
   left: 0;
   margin: 0;
-  font-size: 20px;
   font-weight: bold;
   letter-spacing: 0.1em;
 }
@@ -825,6 +821,9 @@ h1 {
 }
 
 @media (min-width: 576px) {
+  .btn-accent {
+    min-width: 350px;
+  }
   .header-content__buttons .btn:first-of-type {
     margin-right: 20px;
   }
@@ -838,6 +837,9 @@ h1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .skill-item__title {
+    font-size: 20px;
   }
 }
 
@@ -854,6 +856,10 @@ h1 {
   }
   .header-content__title {
     margin: 0px 0px 53px 0px;
+  }
+  .skills__container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   }
 }
 
@@ -873,6 +879,10 @@ h1 {
     padding: 14px 20px;
     min-width: 200px;
     letter-spacing: 0.1em;
+  }
+  .skills__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
 }
 
@@ -901,9 +911,22 @@ h1 {
     text-align: right;
     background-color: rgba(68, 89, 110, 0.85);
   }
+  .skill-item__title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767.8px) and (min-width: 576px) {
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+  }
 }
 
 @media (max-width: 575.8px) {
+  .btn-accent {
+    min-width: 100%;
+  }
   .header-content__buttons {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -915,5 +938,9 @@ h1 {
   }
   .header-content__buttons .btn:first-of-type {
     margin: 0 0 20px 0;
+  }
+  .skills__container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
   }
 }

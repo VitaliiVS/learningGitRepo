@@ -67,9 +67,16 @@ h1 {
     height: 60px;
     font-size: 18px;
     border: 2px solid #2D3651;
-    min-width: 350px;
     background-color: rgba(#2D3651, 0.8);
     letter-spacing: 0.1em;
+
+    @include sm-min {
+        min-width: 350px;
+    }
+
+    @include sm {
+        min-width: 100%;
+    }
 }
 .btn:hover, .btn-accent:hover {
     background-color: #D66926;
