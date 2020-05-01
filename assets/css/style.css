@@ -487,7 +487,16 @@ h1 {
   letter-spacing: 0.08em;
 }
 
-.btn, .btn-accent {
+h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  color: #2d3651;
+  line-height: 1.2em;
+  letter-spacing: 0.097em;
+}
+
+.btn,
+.btn-accent {
   display: block;
   text-align: center;
   -webkit-transition: background-color 0.5s;
@@ -496,7 +505,7 @@ h1 {
 }
 
 .btn {
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -504,13 +513,14 @@ h1 {
   padding: 18px 20px;
   height: 60px;
   font-size: 18px;
-  border: 2px solid #2D3651;
+  border: 2px solid #2d3651;
   background-color: rgba(45, 54, 81, 0.8);
   letter-spacing: 0.1em;
 }
 
-.btn:hover, .btn-accent:hover {
-  background-color: #D66926;
+.btn:hover,
+.btn-accent:hover {
+  background-color: #d66926;
 }
 
 .header {
@@ -820,6 +830,55 @@ h1 {
   transition: color 0.5s;
 }
 
+.about {
+  background-color: #e5e5e5;
+  padding: 97.2px 0 86.5px 0;
+}
+
+.about__container {
+  max-width: 1340px;
+  margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: grid;
+  grid-template-areas: "a1 a2";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__content {
+  grid-template-areas: a1;
+  color: #2d3651;
+  letter-spacing: 0.05em;
+  line-height: 1.35em;
+  margin-right: 93px;
+  color: #637588;
+}
+
+.about__content p:first-of-type {
+  position: relative;
+}
+
+.about__content p:first-of-type::after {
+  position: absolute;
+  top: 0;
+  right: -51px;
+  width: 1px;
+  height: 200px;
+  background-color: rgba(112, 112, 112, 0.27);
+  content: "";
+}
+
+.about__image {
+  grid-template-areas: a2;
+  min-width: 100%;
+  min-height: 487px;
+}
+
 @media (min-width: 576px) {
   .btn-accent {
     min-width: 350px;
@@ -841,11 +900,18 @@ h1 {
   .skill-item__title {
     font-size: 20px;
   }
+  .about__content {
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 992px) {
   h1 {
     font-size: 60px;
+  }
+  h2 {
+    font-size: 40px;
+    margin: 0 0 48px 0;
   }
   .btn {
     height: 60px;
@@ -913,6 +979,9 @@ h1 {
   }
   .skill-item__title {
     font-size: 18px;
+  }
+  .about__content {
+    font-size: 16px;
   }
 }
 
