@@ -579,6 +579,7 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   justify-items: end;
+  position: relative;
 }
 
 .header-navbar__hamburger {
@@ -589,9 +590,9 @@ h1 {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 
@@ -599,16 +600,16 @@ h1 {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 3px;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  -webkit-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .header-navbar__hamburger span:nth-child(1) {
@@ -659,7 +660,7 @@ h1 {
 }
 
 .header-navbar__link:hover {
-  color: #D66926;
+  color: #d66926;
 }
 
 .header-content {
@@ -684,10 +685,6 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.header-content__buttons .btn:first-of-type {
-  margin-right: 20px;
 }
 
 .skills {
@@ -827,6 +824,12 @@ h1 {
   transition: color 0.5s;
 }
 
+@media (min-width: 576px) {
+  .header-content__buttons .btn:first-of-type {
+    margin-right: 20px;
+  }
+}
+
 @media (min-width: 768px) {
   .header-navbar__hamburger {
     display: none;
@@ -892,5 +895,25 @@ h1 {
   }
   .header-navbar__list {
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    text-align: right;
+    background-color: rgba(68, 89, 110, 0.85);
+  }
+}
+
+@media (max-width: 575.8px) {
+  .header-content__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-content__buttons .btn:first-of-type {
+    margin: 0 0 20px 0;
   }
 }

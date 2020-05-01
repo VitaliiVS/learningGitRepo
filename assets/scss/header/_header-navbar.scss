@@ -2,6 +2,7 @@
     display: grid;
     align-items: center;
     justify-items: end;
+    position: relative;
 
     &__hamburger {
         width: 30px;
@@ -9,12 +10,11 @@
         position: relative;
         margin: 20px 0px;
         transform: rotate(0deg);
-        transition: .5s ease-in-out;
+        transition: 0.5s ease-in-out;
         cursor: pointer;
 
         @include md-min {
             display: none;
-            
         }
 
         @include md {
@@ -26,12 +26,12 @@
         position: absolute;
         height: 3px;
         width: 100%;
-        background: #FFFFFF;
+        background: #ffffff;
         border-radius: 3px;
         opacity: 1;
         left: 0;
         transform: rotate(0deg);
-        transition: .25s ease-in-out;
+        transition: 0.25s ease-in-out;
     }
 
     &__hamburger span:nth-child(1) {
@@ -74,6 +74,11 @@
 
         @include md {
             display: none;
+            position: absolute;
+            top: 100%;
+            right: 20px;
+            text-align: right;
+            background-color: rgba(#44596e, 0.85);
         }
     }
 
@@ -84,7 +89,6 @@
     }
 
     &__link:hover {
-    color: #D66926;
+        color: #d66926;
     }
 }
-
