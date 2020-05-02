@@ -1,6 +1,21 @@
 .about {
     background-color: $color-gray-light;
-    padding: 97.2px 0 86.5px 0;
+
+    @include lg-min {
+        padding: 97.2px 0 86.5px 0;
+    }
+
+    @include lg-md {
+        padding: 77px 0 54px 0;
+    }
+
+    @include md-sm {
+        padding: 58px 0 56px 0;
+    }
+
+    @include sm {
+        padding: 57px 0 68px 0;
+    }
 
     &__container {
         max-width: 1340px;
@@ -8,18 +23,39 @@
         padding-right: 20px;
         padding-left: 20px;
         display: grid;
-        grid-template-areas: "a1 a2";
         justify-content: center;
         align-items: center;
+
+        @include lg-min {
+            grid-template-columns: 1fr 271px;
+        }
+
+        @include lg-md {
+            grid-template-columns: 1fr 255px;
+        }
+
+        @include md-sm {
+            grid-template-columns: 1fr 236px;
+        }
+
+        @include sm {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__content {
-        grid-area: a1;
         color: $color-primary;
         letter-spacing: 0.05em;
         line-height: 1.35em;
-        margin-right: 93px;
         color: $color-gray;
+
+        @include lg-min {
+            margin-right: 93px;
+        }
+
+        @include lg-md {
+            margin-right: 66px;
+        }
 
         @include md-min {
             font-size: 18px;
@@ -27,6 +63,9 @@
 
         @include md {
             font-size: 16px;
+        }
+        @include md-sm {
+            margin-right: 74px;
         }
     }
 
@@ -36,17 +75,54 @@
         &::after {
             position: absolute;
             top: 0;
-            right: -51px;
             width: 1px;
             height: 200px;
             background-color: rgba(#707070, 0.27);
             content: "";
+
+            @include lg-min {
+                right: -51px;
+            }
+
+            @include lg-md {
+                right: -24.5px;
+            }
+
+            @include md-sm {
+                right: -18.5px;
+            }
+
+            @include sm {
+                display: none;
+            }
         }
     }
 
     &__image {
-        grid-area: a2;
-        min-width: 100%;
-        min-height: 487px;
+        display: grid;
+        justify-content: center;
+
+        img {
+            @include lg-min {
+                max-width: 100%;
+                max-height: 487px;
+            }
+
+            @include lg-md {
+                max-width: 255px;
+                max-height: 459px;
+            }
+
+            @include md-sm {
+                max-width: 236px;
+                max-height: 425px;
+            }
+
+            @include sm {
+                max-width: 100%;
+                max-height: 487px;
+                margin-top: 23px;
+            }
+        }
     }
 }

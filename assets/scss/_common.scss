@@ -41,6 +41,21 @@ h2 {
         font-size: 40px;
         margin: 0 0 48px 0;
     }
+
+    @include lg-md {
+        font-size: 32px;
+        margin: 0 0 34px 0;
+    }
+
+    @include md-sm {
+        font-size: 24px;
+        margin: 0 0 26px 0;
+    }
+
+    @include sm {
+        margin: 0 0 21px 0;
+        text-align: center;
+    }
 }
 
 .btn,
