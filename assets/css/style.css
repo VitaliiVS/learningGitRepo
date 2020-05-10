@@ -518,9 +518,19 @@ h2 {
   letter-spacing: 0.1em;
 }
 
+.form .btn-accent {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .btn:hover,
-.btn-accent:hover {
+.btn-accent:hover, .form .btn-accent:hover {
   background-color: #d66926;
+}
+
+.form .btn-accent:hover {
+  border-color: #ffffff;
 }
 
 .header {
@@ -873,6 +883,103 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.form {
+  background-color: #2D3651;
+  padding: 30px 0;
+}
+
+.form__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 19.5px;
+  max-width: 1340px;
+  margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.form-item__input {
+  font-family: "Roboto", sans-serif;
+  min-width: 420px;
+  height: 60px;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  padding: 0 30px;
+  caret-color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.form-item__input:hover, .form-item__input:focus {
+  border-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-bottom-color: #ffffff;
+  outline: none;
+}
+
+.form-item__input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.51);
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.form-item__input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.51);
+  -moz-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.form-item__input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.51);
+  -ms-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.form-item__input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.51);
+  -ms-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.form-item__input::placeholder {
+  color: rgba(255, 255, 255, 0.51);
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.form-item__input:hover::-webkit-input-placeholder, .form-item__input:focus::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.form-item__input:hover::-moz-placeholder, .form-item__input:focus::-moz-placeholder {
+  color: #ffffff;
+}
+
+.form-item__input:hover:-ms-input-placeholder, .form-item__input:focus:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form-item__input:hover::-ms-input-placeholder, .form-item__input:focus::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form-item__input:hover::placeholder, .form-item__input:focus::placeholder {
+  color: #ffffff;
+}
+
+.form .btn-accent {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  min-width: 420px;
 }
 
 @media (min-width: 576px) {

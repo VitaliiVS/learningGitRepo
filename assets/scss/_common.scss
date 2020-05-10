@@ -108,7 +108,16 @@ h2 {
         min-width: 100%;
     }
 }
+
+.form .btn-accent {
+    transition: 0.5s;
+}
+
 .btn:hover,
-.btn-accent:hover {
+.btn-accent:hover, .form .btn-accent:hover {
     background-color: #d66926;
+}
+
+.form .btn-accent:hover {
+    border-color: $color-light;
 }
