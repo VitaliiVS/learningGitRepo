@@ -518,19 +518,10 @@ h2 {
   letter-spacing: 0.1em;
 }
 
-.form .btn-accent {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
 .btn:hover,
-.btn-accent:hover, .form .btn-accent:hover {
-  background-color: #d66926;
-}
-
+.btn-accent:hover,
 .form .btn-accent:hover {
-  border-color: #ffffff;
+  background-color: #d66926;
 }
 
 .header {
@@ -726,7 +717,7 @@ h2 {
 }
 
 .skill-item {
-  background-color: #2D3651;
+  background-color: #2d3651;
   min-height: calc(33.33vh - 13px);
   position: relative;
   overflow: hidden;
@@ -739,7 +730,7 @@ h2 {
 }
 
 .skill-item:hover .skill-item__link {
-  color: #D66926;
+  color: #d66926;
 }
 
 .skill-item:nth-of-type(1) {
@@ -886,23 +877,22 @@ h2 {
 }
 
 .form {
-  background-color: #2D3651;
-  padding: 30px 0;
+  background-color: #2d3651;
 }
 
 .form__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 19.5px;
   max-width: 1340px;
+  display: grid;
+  grid-gap: 20px;
   margin: auto;
   padding-right: 20px;
   padding-left: 20px;
 }
 
 .form-item__input {
+  display: block;
   font-family: "Roboto", sans-serif;
-  min-width: 420px;
+  width: 100%;
   height: 60px;
   font-size: 18px;
   letter-spacing: 0.1em;
@@ -975,19 +965,27 @@ h2 {
 }
 
 .form .btn-accent {
+  display: block;
   cursor: pointer;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
   border-bottom-color: rgba(255, 255, 255, 0.25);
-  min-width: 420px;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.form .btn-accent:hover {
+  border-color: #ffffff;
 }
 
 @media (min-width: 576px) {
-  .btn-accent {
-    min-width: 350px;
-  }
   .header-content__buttons .btn:first-of-type {
     margin-right: 20px;
+  }
+  .skills__button .btn-accent {
+    min-width: 350px;
   }
 }
 
@@ -1005,6 +1003,9 @@ h2 {
   }
   .about__content {
     font-size: 18px;
+  }
+  .form__container {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -1046,11 +1047,20 @@ h2 {
     max-width: 100%;
     max-height: 487px;
   }
+  .form {
+    padding: 30px 0;
+  }
 }
 
 @media (max-width: 991.8px) {
   .header-content__title {
     margin: 0px 0px 43px 0px;
+  }
+  .form {
+    padding: 20px 0;
+  }
+  .form__container {
+    max-width: 100%;
   }
 }
 
@@ -1149,15 +1159,18 @@ h2 {
     max-width: 236px;
     max-height: 425px;
   }
+  .form__container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .form-item:first-of-type {
+    grid-column-end: span 2;
+  }
 }
 
 @media (max-width: 575.8px) {
   h2 {
     margin: 0 0 21px 0;
     text-align: center;
-  }
-  .btn-accent {
-    min-width: 100%;
   }
   .header-content__buttons {
     -webkit-box-orient: vertical;
@@ -1174,6 +1187,9 @@ h2 {
   .skills__container {
     grid-template-columns: 1fr;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+  }
+  .skills__button .btn-accent {
+    min-width: 100%;
   }
   .about {
     padding: 57px 0 68px 0;
