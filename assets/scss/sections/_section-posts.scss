@@ -1,11 +1,11 @@
 .posts {
 
     @include lg-min {
-        padding-top: 100px 20px;
+        padding: 100px 20px;
     }
 
     @include lg-md {
-        padding-top: 80px 20px;
+        padding: 80px 20px;
     }
 
     @include md {
