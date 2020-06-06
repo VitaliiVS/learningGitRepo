@@ -1,15 +1,15 @@
 .posts {
 
     @include lg-min {
-        padding-top: 100px;
+        padding-top: 100px 20px;
     }
 
     @include lg-md {
-        padding-top: 80px;
+        padding-top: 80px 20px;
     }
 
     @include md {
-        padding-top: 60px;
+        padding: 60px 20px;
     }
     
     &__container {
