@@ -1,0 +1,59 @@
+.footer {
+    background-color: $color-primary;
+    text-align: center;
+    min-height: 250px;
+
+    &__container {
+        justify-content: center;
+        align-items: center;
+        max-width: 1340px;
+        margin: auto;
+        padding: 50px 20px 70px;
+    }
+
+    &__socials {
+        position: relative;
+        margin-bottom: $gap * 3;
+
+        &::after {
+            position: absolute;
+            bottom: -30px;
+            left: calc(50% - 75px / 2);
+            width: 75px;
+            height: 2px;
+            content: "";
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        a {
+            transition: color 0.5s;
+
+            &:not(:last-of-type) {
+                margin-right: $gap;
+            }
+
+            &:hover {
+                color: $color-accent;
+            }
+        }
+
+        i {
+            font-size: 36px;
+        }
+    }
+
+    &__signature {
+        
+        span:first-of-type {
+            letter-spacing: 0.33em;
+            font-weight: 100;
+            margin-left: 3.5px;
+        }
+
+        span:last-of-type {
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            color: $color-gray-light;
+        }
+    }
+}
