@@ -1,2 +1,1 @@
-# learningGitRepo
 # grid-template
