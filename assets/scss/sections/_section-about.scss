@@ -20,8 +20,8 @@
     &__container {
         max-width: 1340px;
         margin: auto;
-        padding-right: 20px;
-        padding-left: 20px;
+        padding-right: $gap;
+        padding-left: $gap;
         display: grid;
         justify-content: center;
         align-items: center;
@@ -50,11 +50,11 @@
         color: $color-gray;
 
         @include lg-min {
-            margin-right: 93px;
+            margin-right: $gap * 5;
         }
 
         @include lg-md {
-            margin-right: 66px;
+            margin-right: $gap * 2;
         }
 
         @include md-min {
@@ -65,7 +65,7 @@
             font-size: 16px;
         }
         @include md-sm {
-            margin-right: 74px;
+            margin-right: $gap;
         }
     }
 
@@ -81,15 +81,15 @@
             content: "";
 
             @include lg-min {
-                right: -51px;
+                right: -50px;
             }
 
             @include lg-md {
-                right: -24.5px;
+                right: -20px;
             }
 
             @include md-sm {
-                right: -18.5px;
+                right: -10px;
             }
 
             @include sm {
