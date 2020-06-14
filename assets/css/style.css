@@ -703,7 +703,6 @@ h2 {
 
 .skills__container {
   display: grid;
-  grid-gap: 10px;
   padding-bottom: 20px;
 }
 
@@ -904,6 +903,7 @@ h2 {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  color: #ffffff;
 }
 
 .form-item__input:hover, .form-item__input:focus {
@@ -1203,6 +1203,7 @@ h2 {
     margin: 0px 0px 53px 0px;
   }
   .skills__container {
+    grid-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
   }
@@ -1262,6 +1263,7 @@ h2 {
     letter-spacing: 0.1em;
   }
   .skills__container {
+    grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
   }
@@ -1332,6 +1334,7 @@ h2 {
     margin: 0 0 30px 0;
   }
   .skills__container {
+    grid-gap: 10px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
   }
@@ -1380,7 +1383,11 @@ h2 {
   .header-content__buttons .btn:first-of-type {
     margin: 0 0 20px 0;
   }
+  .skills {
+    padding: 20px;
+  }
   .skills__container {
+    grid-gap: 20px;
     grid-template-columns: 1fr;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
   }
@@ -1404,5 +1411,8 @@ h2 {
   .posts__wrapper {
     grid-template-columns: 1fr;
     grid-template-areas: "b1" "b2" "b3" "b4" "b5" "b6";
+  }
+  .posts__button .btn-accent {
+    width: 100%;
   }
 }

@@ -1,27 +1,34 @@
 .skills {
     padding: 10px 10px 40px 10px;
 
+    @include sm {
+        padding: 20px;
+    }
+
     &__container {
         display: grid;
-        grid-gap: 10px;
         padding-bottom: 20px;
 
         @include lg-min {
+            grid-gap: 10px;
             grid-template-columns: repeat(4, 1fr);
             grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
         }
 
         @include lg-md {
+            grid-gap: 10px;
             grid-template-columns: repeat(3, 1fr);
             grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
         }
 
         @include md-sm {
+            grid-gap: 10px;
             grid-template-columns: repeat(2, 1fr);
             grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
         }
 
         @include sm {
+            grid-gap: 20px;
             grid-template-columns: 1fr;
             grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
         }

@@ -49,6 +49,7 @@
         background-color: rgba($color-light, 0.05);
         border-bottom-color: rgba($color-light, 0.1);
         transition: 0.5s;
+        color: $color-light;
     }
 
     &-item__input:hover,
